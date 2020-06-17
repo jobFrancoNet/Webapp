@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <link rel="icon" href="img/logo-pittogramma.jpg" type="image/jpg">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    {% block title %}<title>LecceSpesa</title>{% endblock %}
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+	    {% block sidebar %}
+            <a class="navbar-brand mx-auto" href="#">
+                <!-- Sistemare Elemento centrato con logo -->
+                <img src="..." class="d-inline-block align-top" alt="" loading="lazy">
+                LecceSpesa
+            </a>
+        </nav>
+        {% endblock %}
+	{% block content %}
+        <div class="hero">
+            <h1>resta pure a casa <br> a fare la spesa <br>ci pensiamo noi</h1>
+            <hr>
+            <h4>semplice, veloce, sicuro!</h4>
+            <div class="container-fluid cont-accedi">
+                <!--ACCEDI-->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-accedi" data-toggle="modal" data-target="#accedi">
+                    Accedi
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="accedi" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Bentornato!</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body modal-accedi">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Indirizzo E-mail</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Password</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1">
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">Ricordami</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Accedi</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--REGISTRATI-->
+        <div class="container-fluid cont-registrati">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-registrati" data-toggle="modal" data-target="#registrati">
+                Registrati
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="registrati" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Benvenuto!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body modal-registrati">
+                            Stai per registrarti a LecceSpesa, il portale che supporta i commercianti della città di Lecce ed i suoi cittadini. <br>
+                            Prima di tutto parlaci di te! <br>
+                            Vuoi fare la spesa oppure aprire il tuo negozio online?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-utente" data-toggle="modal" data-target="#utenti">Voglio fare la spesa</button>
+                            <button type="button" class="btn btn-negozio" data-toggle="modal" data-target="#negozio">Voglio aprire il mio negozio </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Utenti -->
+                <div class="modal fade" id="utenti" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Voglio fare la spesa</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="row">
+                                        <div class="col">
+                                            <input type="text" class="form-control" placeholder="Nome" required>
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-control" placeholder="Cognome" required>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="form-row">
+                                        <div class="form-group col">
+                                            <input type="email" class="form-control" placeholder="E-mail" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col">
+                                            <input type="password" class="form-control" placeholder="Password" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col">
+                                            <input type="text" class="form-control" placeholder="Indirizzo" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col">
+                                            <input type="tel" class="form-control" placeholder="Cellulare / Numero di casa" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                                        <label class="form-check-label" for="exampleCheck1">Accetto i <a href="#">Termini e le Condizioni</a></label>
+                                    </div>
+                                </form>
+                                <div class="modal-footer reg-utente">
+                                    <button type="submit" class="btn btn-reg-utente">Registrati</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal Negozi -->
+                <div class="modal fade" id="negozio" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Voglio aprire il mio negozio</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group col">
+                                            <input type="text" class="form-control" placeholder="Nome / Nome Attività" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col">
+                                            <input type="email" class="form-control" placeholder="E-mail" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col">
+                                            <input type="password" class="form-control" placeholder="Password" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col">
+                                            <input type="tel" class="form-control" placeholder="Cellulare">
+                                        </div>
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                                        <label class="form-check-label" for="exampleCheck1">Accetto i <a href="#">Termini e le Condizioni</a></label>
+                                    </div>
+                                </form>
+                                <div class="modal-footer reg-utente">
+                                    <button type="submit" class="btn btn-reg-utente">Registrati</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body> {% endblock %}
+
+</html>

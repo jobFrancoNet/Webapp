@@ -1,0 +1,246 @@
+/*-- INDEX --*/
+
+/*-- GOOGLE FONT --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+header {
+    height: 100vh;
+    background: url(img/desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1 {
+    color: orange;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 4.5rem;
+    margin-left: 50px;
+    padding-bottom: 15px;
+    margin-top: 50px;
+}
+
+h4 {
+    color: orange;
+    text-transform: uppercase;
+    text-align: left;
+    margin-left: 50px;
+}
+
+hr {
+    background-color: green;
+    width: 50%;
+    margin-left: 50px;
+
+}
+
+/*--BUTTONS--*/
+
+.btn {
+    width: 150px;
+    background-color: green;
+    border: 1px solid green;
+    border-radius: 33px;
+    color: white;
+    margin: 0;
+    margin-top: 10px;
+    position: absolute;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 10px;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: orange;
+    border-color: orange;
+}
+
+.accedi {
+    background-color: transparent;
+    color: green;
+    top: 85%;
+    left: 125px;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.registrati {
+    top: 85%;
+    left: 300px;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.btn-registrati {
+    width: 160px;
+}
+
+.navbar-brand {
+    color: green;
+    border-bottom: 1px solid orange;
+    margin-left: 0 !important;
+    padding-left: 50px;
+    /*-- Da rivedere una volta inserito il logo --*/
+    font-size: 30px;
+}
+
+.hero {
+    margin-top: 0;
+}
+
+/*--MODALS--*/
+
+.cont-accedi {
+    margin-left: 30px;
+}
+
+.cont-registrati {
+    margin-top: 0px;
+    margin-left: 200px;
+}
+
+.modal-footer > .btn-negozio,
+.modal-footer > .btn-utente {
+    position: absolute;
+    display: block;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 90%;
+}
+
+.modal-footer > .btn-utente {
+    top: 57%;
+    width: 70%;
+}
+
+.modal-accedi {
+    height: 43vh;
+}
+
+.modal-footer {
+    height: 20vh;
+}
+
+.reg-utente {
+    height: 10vh;
+    justify-content: center;
+}
+
+.modal-footer > .btn-reg-utente {
+    width: 160px;
+    top: 89%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*--Media Query--*/
+
+@media only screen and (max-width: 600px) {
+
+    /*-- NAVBAR --*/
+
+    .navbar-brand {
+        padding-top: 10px;
+    }
+
+    .navbar-brand:hover {
+        color: green;
+        cursor: default;
+    }
+
+    /*-- HEADER --*/
+
+    header {
+        height: 100vh;
+        width: 100%;
+        background: url(img/mobile.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+
+    h1,
+    h4 {
+        text-align: center;
+        margin: 20px 0 0 0;
+    }
+
+    h1 {
+        font-size: 230%;
+        font-weight: bold;
+    }
+
+    h4 {
+        font-weight: 300;
+        font-size: 130%;
+    }
+
+    hr {
+        background-color: green;
+        width: 50%;
+        margin-left: 125px;
+    }
+
+    /*-- BUTTONS --*/
+
+    .btn {
+        display: block;
+        width: 250px;
+        background-color: orange;
+        border: 1px solid orange;
+        border-radius: 33px;
+        color: aliceblue;
+        margin: 0;
+        position: absolute;
+        font-size: 20px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 5px 10px;
+    }
+
+    .btn:hover {
+        color: #fff;
+        background-color: green;
+        border-color: green;
+    }
+
+    .accedi {
+        background-color: orange;
+        color: #fff;
+        top: 43%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .registrati {
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .cont-accedi {
+        margin-left: 20%;
+        margin-top: 20px;
+    }
+
+    .cont-registrati {
+        margin-left: 20%;
+        margin-top: 75px;
+    }
+
+}
