@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def Homepage(request):
 	return render(request, 'index.html')
+
+def LoginUser(request):
+	pass

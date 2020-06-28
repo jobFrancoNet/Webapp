@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path
 
 from Index import views as index_views
+from Index.views import LoginUser
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index_views.Homepage, name='home'),
+    path('', views.LoginUser),
 ]
